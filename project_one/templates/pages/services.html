@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Skills</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav>
+        <div class="navbar">
+            <div class="logo"><a href="#">P</a></div>
+            <ul class="menu">
+                <li><a href="{% url 'portfolio:index' %}">Home</a></li>
+                <li><a href="{% url 'portfolio:about' %}">About</a></li>
+                <li><a href="{% url 'portfolio:skills' %}">Skills</a></li>
+                <li><a href="{% url 'portfolio:services' %}">Services</a></li>
+                <li><a href="{% url 'portfolio:contact' %}">Contact</a></li>
+                <div class="cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+            </ul>
+        </div>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="content">
+            <div class="title"><span>My Services</span></div>
+            <div class="boxes">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="topic">Web Devlopment</div>
+                    <p>
+                        Using HTML, CSS, Javascript, PHP, or Angular Projects, I create
+                        websites that are easy to use and look great, whether you’re on a
+                        phone or a computer.
+                    </p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="topic">Graphic Design</div>
+                    <p>
+                        From logos to social media graphics, offering designs that drive
+                        engagement and attract attention.
+                    </p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <div class="topic">Video Editing</div>
+                    <p>
+                        Simple video edits—think trimming, adding music, and creating
+                        smooth transitions to make your content shine.
+                    </p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <div class="topic">Technical Support</div>
+                    <p>
+                        Whether it’s a software glitch, a hardware problem, or tech setup
+                        for an event, I can help you sort it out fast.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'script.js' %}"></script>
+
+</body>
+
+</html>
