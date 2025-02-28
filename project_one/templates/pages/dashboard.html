@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+{% block body %}
+{% load format_count %}
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4 m-4">
+    {% for item in data %}
+    <div class="bg-white shadow-lg rounded-2xl p-6 transition-transform transform hover:scale-105 hover:shadow-xl">
+        <h2 class="text-sm font-semibold text-gray-600 uppercase tracking-wide">{{ item.title }}</h2>
+        <p class="text-3xl font-extrabold text-gray-900 mt-2">{{ item.count|format_count }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

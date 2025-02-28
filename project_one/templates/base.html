@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'basestyle.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+    <!-- TailwindCSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="sidenav">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="{% url 'portfolio:dashboard' %}">Home</a></li>
+            <li><a href="{% url 'portfolio:reports' %}">Report</a></li>
+            <li><a href=" {% url 'portfolio:settings' %}">Settings</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">Simple Header</div>
+    </div>
+    {% block body %} {% endblock %}
+</body>
+
+</html>
