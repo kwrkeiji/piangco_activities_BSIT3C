@@ -20,4 +20,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('portfolio.urls', namespace="index")),
+    # gets the urls.py from items folder
+    path('api/', include ([
+        path('items/', include('items.urls', namespace='items')) 
+    ]))
 ]
